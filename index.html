@@ -123,16 +123,25 @@
     </ul>
 
     <!-- Close Button -->
-    <button class="absolute top-0 bottom-0 right-0 z-10 left-[22rem]" @click="openMenu = !openMenu"
-        :aria-expanded="openMenu" aria-controls="mobile-navigation"
-        aria-label="Close Navigation Menu">
-        <svg xmlns="http://www.w3.org/2000/svg"
-             class="absolute w-6 h-6 text-gray-700 hover:text-blue-600  top-2 left-2"
-             fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12" />
-        </svg>
-    </button>
+
+    <button
+    @click="openMenu = !openMenu"
+    :aria-expanded="openMenu"
+    aria-controls="mobile-navigation"
+    aria-label="Close Navigation Menu"
+    class="fixed top-4 right-4 z-50 p-2 rounded-md bg-white/90 shadow-md
+           flex items-center justify-center
+           md:hidden"
+>
+    <svg xmlns="http://www.w3.org/2000/svg"
+         class="w-6 h-6 text-gray-700 hover:text-blue-600"
+         fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+    </svg>
+</button>
+
+    
 </nav>
                 </div>
             </div>
@@ -207,9 +216,10 @@
                                 </defs>
                             </svg>
                         </div>
+                        <div class=" flex items-center justify-center">
                         <img src="assets/images/uu.png" alt="image"
                                 class="relative z-10 object-cover w-[80%] lg:w-[60%] h-full rounded-md ">
-                    </div>
+                    </div></div>
                 </div>
             </div>
             <div class="absolute items-center justify-center hidden right-10 top-1/2 lg:inline-block">
@@ -233,7 +243,7 @@
             </div>
         </section>
     </section>
-    <section class="py-20 bg-gray-100" id="about">
+    <section class="py-16 lg:py-20 bg-gray-100" id="about">
         <div class="max-w-6xl px-4 mx-auto">
             <div class="max-w-xl pb-2 mx-auto mb-10">
                 <div class="text-center ">
@@ -329,7 +339,7 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-white " id="experience">
+    <section class="py-16 lg:py-20 bg-white " id="experience">
         <div class="max-w-6xl px-4 mx-auto">
             <div class="max-w-xl pb-2 mx-auto mb-6">
                 <div class="text-center ">
@@ -365,7 +375,7 @@
                     </div>
                     <div class="mb-6">
                         <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-700 ">HTML,CSS,JS</span>
+                            <span class="text-sm text-gray-700 ">HTML,CSS,Tailwind CSS,JS</span>
                             <span
                                 class="px-2 py-1  rounded-full text-xs text-[#FF014F] font-medium min-w-[46px] text-center">90%</span>
                         </div>
@@ -398,12 +408,12 @@
                     </div>
                     <div class="mb-6">
                         <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-700 ">React JS</span>
+                            <span class="text-sm text-gray-700 ">Next JS</span>
                             <span
-                                class="px-2 py-1  rounded-full text-xs text-[#FF014F] font-medium min-w-[46px] text-center">70%</span>
+                                class="px-2 py-1  rounded-full text-xs text-[#FF014F] font-medium min-w-[46px] text-center">50%</span>
                         </div>
                         <div class="w-full h-1 mt-2 mb-6 bg-gray-200">
-                            <div class="h-1 bg-[#FF014F] rounded-full" style="width: 70%"></div>
+                            <div class="h-1 bg-[#FF014F] rounded-full" style="width: 50%"></div>
                         </div>
                     </div>
                     <div class="mb-6">
@@ -433,7 +443,7 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-gray-50 " id="service">
+    <section class="py-16 lg:py-20 bg-gray-50 " id="service">
         <div class="max-w-6xl px-4 mx-auto">
             <div class="max-w-xl pb-2 mx-auto mb-6">
                 <div class="text-center ">
@@ -546,7 +556,7 @@ This ensures faster load times and a better experience across all devices.
         </div>
     </section>
     
-    <section class="py-16 bg-white " id="portfolio">
+    <section class="py-16 lg:py-20 bg-white " id="portfolio">
         <div class="max-w-6xl px-4 mx-auto">
             <div class="max-w-xl pb-2 mx-auto mb-6">
                 <div class="text-center ">
@@ -568,7 +578,7 @@ This ensures faster load times and a better experience across all devices.
                     </p>
                 </div>
             </div>
-                    <div class="flex flex-wrap justify-center mb-12 space-x-4">
+                    <div class="flex flex-wrap justify-center mb-8 space-x-4">
     <button onclick="filterPortfolios('all')"
         class="tab-btn bg-gray-200 text-[#FF014F] px-6 py-2 rounded-md lg:mb-0 mb-2">
         All
@@ -692,7 +702,6 @@ This ensures faster load times and a better experience across all devices.
         </div>
     </section>
    
-
 <section id="contact" class="py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-8 text-gray-800">Contact Me</h2>
@@ -728,7 +737,6 @@ This ensures faster load times and a better experience across all devices.
 
     </div>
 </section>
-
 
     <section class="py-6 bg-white ">
         <div class="max-w-6xl px-4 mx-auto">
